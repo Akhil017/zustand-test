@@ -19,7 +19,6 @@ function CourseList({ handleModal }) {
       {!courses.length ? (
         <>
           <p className="mb-4">you dont have any courses</p>
-          <button className="btn btn-accent">Add course</button>
         </>
       ) : (
         <div className="overflow-x-auto">
@@ -36,21 +35,22 @@ function CourseList({ handleModal }) {
               return (
                 <tbody key={course.id}>
                   <tr>
-                    <th>{index}</th>
+                    <th>{index + 1}</th>
                     <td>{course.title}</td>
                     <th>
-                      <label>
-                        <input
-                          onChange={() => toggleCourseStatus(course.id)}
-                          type="checkbox"
-                          className="checkbox"
-                          value={course.completed}
-                        />
-                      </label>
+                      <input
+                        onChange={() => toggleCourseStatus(course.id)}
+                        type="checkbox"
+                        className="checkbox"
+                        value={course.completed}
+                      />
                     </th>
                     <th>
-                      <button className="btn text-red-500 btn-ghost btn-xs">
-                        details
+                      <button
+                        className="btn text-red-500 btn-ghost btn-xs"
+                        onClick={() => removeCourse(course.id)}
+                      >
+                        delete
                       </button>
                     </th>
                   </tr>

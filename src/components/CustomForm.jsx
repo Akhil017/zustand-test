@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import useCourseStore from "../app/store";
-import { Artboard } from "react-daisyui";
-import Input from "react-daisyui";
 
 function CustomForm() {
   const { addCourse } = useCourseStore((state) => state);

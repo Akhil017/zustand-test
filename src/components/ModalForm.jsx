@@ -2,17 +2,6 @@ import React, { useEffect, useState } from "react";
 import useCourseStore from "../app/store";
 import Modal from "react-modal";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 function ModalForm({ isModalOpen, handleModal }) {
   const { addCourse } = useCourseStore((state) => state);
   const [courseTitle, setCourseTitle] = useState("");
