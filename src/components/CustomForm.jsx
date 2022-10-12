@@ -5,8 +5,6 @@ function CustomForm() {
   const { addCourse } = useCourseStore((state) => state);
   const [courseTitle, setCourseTitle] = useState("");
 
-  console.log("form rendered");
-
   const handleCourseSubmit = () => {
     if (!courseTitle) return alert("please give a course title");
     addCourse({

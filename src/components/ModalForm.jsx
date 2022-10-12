@@ -11,10 +11,6 @@ function ModalForm({ isModalOpen, handleModal }) {
     setmodalIsOpen(isModalOpen);
   }, [isModalOpen]);
 
-  console.log({ modalIsOpen });
-
-  console.log("form rendered");
-
   function closeModal() {
     handleModal(false);
   }

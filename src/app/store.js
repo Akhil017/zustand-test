@@ -5,11 +5,13 @@ import todoSlice from "./slices/todoSlice";
 
 const useCourseStore = create(
   devtools(
-    persist((...a) => ({
-      ...courseSlice(...a),
-      ...todoSlice(...a),
-    })),
-    { name: "courses" }
+    persist(
+      (...a) => ({
+        ...courseSlice(...a),
+        ...todoSlice(...a),
+      }),
+      { name: "courses" }
+    )
   )
 );
 
