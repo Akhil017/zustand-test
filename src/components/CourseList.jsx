@@ -8,7 +8,7 @@ function CourseList({ handleModal }) {
 
   return (
     <div className="card w-full h-5/6 bg-base-100 shadow-xl flex items-center justify-center relative">
-      <div className="absolute top-0 right-0 p-4">
+      <div className="absolute top-0 right-0 p-8">
         <button
           className="btn btn-success btn-sm"
           onClick={() => handleModal(true)}
@@ -17,9 +17,9 @@ function CourseList({ handleModal }) {
         </button>
       </div>
       {!courses.length ? (
-        <>
-          <p className="mb-4">you dont have any courses</p>
-        </>
+        <div className="h-full flex items-center">
+          <p>you dont have any courses</p>
+        </div>
       ) : (
         <div className="overflow-x-auto">
           <table className="table w-full">
